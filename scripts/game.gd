@@ -2,6 +2,8 @@ extends Node2D
 
 onready var person = get_node("Oya")
 onready var camera = get_node("Respaw")
+var acaraje = 0
+var ameixa = 0
 
 func _ready():
 	
@@ -27,3 +29,14 @@ func reviver():
 	person.set_pos(get_node("respaw_point").get_pos())
 	person.reviver()
 	get_node("Oya/spriteOya").set_flip_h(false)
+	
+
+
+func _on_Oya_acaraje():
+	acaraje += 50
+	get_node("canvasLayer/pontos").set_text(str(acaraje))
+	
+
+
+
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=1]
+[gd_scene load_steps=34 format=1]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://scripts/personagem.gd" type="Script" id=2]
@@ -23,6 +23,8 @@
 [ext_resource path="res://sprites/botoes/righthover.png" type="Texture" id=21]
 [ext_resource path="res://sprites/botoes/up.png" type="Texture" id=22]
 [ext_resource path="res://sprites/botoes/uphover.png" type="Texture" id=23]
+[ext_resource path="res://sprites/cestaPontos.png" type="Texture" id=24]
+[ext_resource path="res://fonts/font140.fnt" type="BitmapFont" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -263,27 +265,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-editor/display_folded = true
-input/pickable = false
-shapes/0/shape = SubResource( 7 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -32, 484 )
-shapes/0/trigger = false
-collision/layers = 0
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-
-transform/pos = Vector2( -32, 484 )
-shape = SubResource( 7 )
-trigger = false
-_update_shape_index = 0
-
 [node name="barreira_direita" type="StaticBody2D" parent="."]
 
 editor/display_folded = true
@@ -306,8 +287,31 @@ shape = SubResource( 7 )
 trigger = false
 _update_shape_index = 0
 
+[node name="barreira_esquerda" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 10, 2 )
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -32, 484 )
+shapes/0/trigger = false
+collision/layers = 0
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barreira_esquerda"]
+
+transform/pos = Vector2( -32, 484 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -681,6 +685,8 @@ scale = Vector2( 1, 1 )
 
 [node name="controles" type="Node2D" parent="canvasLayer"]
 
+editor/display_folded = true
+
 [node name="touchLeft" type="TouchScreenButton" parent="canvasLayer/controles"]
 
 transform/pos = Vector2( 22.1863, 589.488 )
@@ -723,7 +729,65 @@ passby_press = false
 action = ""
 visibility_mode = 0
 
+[node name="Sprite" type="Sprite" parent="canvasLayer"]
+
+transform/pos = Vector2( 76, 69 )
+transform/scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 24 )
+
+[node name="pontos" type="Label" parent="canvasLayer"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 164.0
+margin/top = 20.0
+margin/right = 330.0
+margin/bottom = 152.0
+custom_fonts/font = ExtResource( 25 )
+custom_colors/font_color = Color( 0.976471, 0.239216, 0.607843, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 7
+custom_constants/shadow_offset_y = -1
+custom_constants/shadow_as_outline = 1
+text = "30"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="time" type="Label" parent="canvasLayer"]
+
+anchor/left = 3
+anchor/right = 3
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 69.0
+margin/top = 0.0
+margin/right = -99.0
+margin/bottom = 132.0
+custom_fonts/font = ExtResource( 25 )
+custom_colors/font_color = Color( 0.976471, 0.239216, 0.607843, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 7
+custom_constants/shadow_offset_y = -1
+custom_constants/shadow_as_outline = 1
+text = "22"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [connection signal="timeout" from="respaw_time" to="." method="_on_respaw_time_timeout"]
+
+[connection signal="acaraje" from="Oya" to="." method="_on_Oya_acaraje"]
+
+[connection signal="ameixa" from="Oya" to="." method="_on_Oya_ameixa"]
 
 [connection signal="morreu" from="Oya" to="." method="_on_Oya_morreu"]
 
