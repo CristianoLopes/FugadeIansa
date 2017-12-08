@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://scripts/obstaculo.gd" type="Script" id=1]
+[ext_resource path="res://sprites/espinho.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 43.1195
+
+[node name="Obstaculos" type="Node2D"]
+
+[node name="body" type="KinematicBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2356.13, 580.056 )
+shapes/0/trigger = false
+collision/layers = 4097
+collision/mask = 4096
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="body"]
+
+transform/pos = Vector2( 2356.13, 580.056 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body"]
+
+transform/pos = Vector2( 2356.13, 580.056 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+

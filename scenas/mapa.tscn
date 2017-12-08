@@ -1,0 +1,251 @@
+[gd_scene load_steps=22 format=1]
+
+[ext_resource path="res://sprites/blocoN1T2CO.png" type="Texture" id=1]
+[ext_resource path="res://sprites/blocoN1T2E.png" type="Texture" id=2]
+[ext_resource path="res://sprites/blocoN1D.png" type="Texture" id=3]
+[ext_resource path="res://sprites/blocoN1T2C.png" type="Texture" id=4]
+[ext_resource path="res://sprites/blocoBarro.png" type="Texture" id=5]
+[ext_resource path="res://sprites/arvoreT1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/arvoreT1P.png" type="Texture" id=7]
+[ext_resource path="res://sprites/arvoreT1M.png" type="Texture" id=8]
+[ext_resource path="res://sprites/arvoreT2.png" type="Texture" id=9]
+[ext_resource path="res://sprites/arvoreT2P.png" type="Texture" id=10]
+[ext_resource path="res://sprites/arvoreT2M.png" type="Texture" id=11]
+[ext_resource path="res://sprites/arvoreT3.png" type="Texture" id=12]
+[ext_resource path="res://sprites/arvoreT3P.png" type="Texture" id=13]
+[ext_resource path="res://sprites/arvoreT3M.png" type="Texture" id=14]
+[ext_resource path="res://sprites/montanha.png" type="Texture" id=15]
+[ext_resource path="res://sprites/cabanas.png" type="Texture" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 27.5159 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 27.5159 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 27.5159 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 26.2114 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 50.3846 )
+
+[node name="mapa" type="Node2D"]
+
+[node name="BlocoN1CO" type="Sprite" parent="."]
+
+transform/pos = Vector2( -226.352, 0.524342 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 0, 0, 103, 106.187 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BlocoN1CO"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 22.7458 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlocoN1CO/StaticBody2D"]
+
+transform/pos = Vector2( 0, 22.7458 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="BlocoN1E " type="Sprite" parent="."]
+
+transform/pos = Vector2( -103.352, 0.524342 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BlocoN1E "]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 23.7458 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlocoN1E /StaticBody2D"]
+
+transform/pos = Vector2( 0, 23.7458 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="BlocoN1D" type="Sprite" parent="."]
+
+transform/pos = Vector2( 103, 0 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BlocoN1D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 25.7458 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlocoN1D/StaticBody2D"]
+
+transform/pos = Vector2( 0, 25.7458 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="BlocoN1T2CO" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 213.648, -227.476 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BlocoN1T2CO"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 23.7458 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlocoN1T2CO/StaticBody2D"]
+
+transform/pos = Vector2( 0, 23.7458 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Blocodebarro" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -109.352, 818.524 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Blocodebarro"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -2.25423 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blocodebarro/StaticBody2D"]
+
+transform/pos = Vector2( 0, -2.25423 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="ArvoreT1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 427.648, 79.5244 )
+texture = ExtResource( 6 )
+
+[node name="ArvoreT1P" type="Sprite" parent="."]
+
+transform/pos = Vector2( 794.272, 142.695 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="ArvoreT1M" type="Sprite" parent="."]
+
+transform/pos = Vector2( 794.272, 142.695 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="ArvoreT2" type="Sprite" parent="."]
+
+transform/pos = Vector2( 427.648, 555.524 )
+texture = ExtResource( 9 )
+
+[node name="ArvoreT2P" type="Sprite" parent="."]
+
+transform/pos = Vector2( 797.648, 555.524 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="ArvoreT2M" type="Sprite" parent="."]
+
+transform/pos = Vector2( 797.648, 555.524 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="ArvoreT3" type="Sprite" parent="."]
+
+transform/pos = Vector2( 427.648, 975.524 )
+texture = ExtResource( 12 )
+
+[node name="ArvoreT3P" type="Sprite" parent="."]
+
+transform/pos = Vector2( 937.648, 975.524 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="ArvoreT3M" type="Sprite" parent="."]
+
+transform/pos = Vector2( 937.648, 975.524 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="Montanha" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1252.65, 134.524 )
+transform/scale = Vector2( 0.5, 0.5 )
+z/z = -2
+texture = ExtResource( 15 )
+
+[node name="Cabana" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2542.91, 534.138 )
+transform/rot = -0.360785
+transform/scale = Vector2( 5.31492, 5.31492 )
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 8, 0, 0 )
+
+[node name="Cabana1" type="Sprite" parent="."]
+
+transform/pos = Vector2( 2542.91, 534.138 )
+transform/rot = -0.360785
+transform/scale = Vector2( 5.31492, 5.31492 )
+texture = ExtResource( 16 )
+flip_h = true
+region_rect = Rect2( 0, 8, 0, 0 )
+
+

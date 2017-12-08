@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="TileSet" subresource_count="22" version="2.1" version_name="Godot Engine v2.1.4.stable.official">
+	<ext_resource path="res://sprites/blocoN1T2CO.png" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://sprites/arvoreT2P.png" type="Texture" index="15"></ext_resource>
+	<ext_resource path="res://sprites/blocoN1T2E.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://sprites/blocoN1D.png" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://sprites/blocoBarro.png" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://sprites/blocoN1T2C.png" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://sprites/cabanas.png" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://sprites/arvoreT3.png" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://sprites/arvoreT1.png" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://sprites/arvoreT2.png" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://sprites/montanha.png" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://sprites/arvoreT1M.png" type="Texture" index="13"></ext_resource>
+	<ext_resource path="res://sprites/arvoreT2M.png" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://sprites/arvoreT3M.png" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://sprites/arvoreT3P.png" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://sprites/arvoreT1P.png" type="Texture" index="12"></ext_resource>
+	<resource type="RectangleShape2D" path="local://4">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 51.682, 27.5159 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://5">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 51.682, 27.5159 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://6">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 51.682, 27.5159 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://2">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 51.682, 26.2114 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://3">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 51.682, 50.3846 </vector2>
+
+	</resource>
+	<main_resource>
+		<string name="0/name"> "BlocoN1CO" </string>
+		<resource name="0/texture" external="0">  </resource>
+		<vector2 name="0/tex_offset"> 0, 0 </vector2>
+		<resource name="0/material"></resource>		<color name="0/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="0/region"> 0, 0, 103, 106 </rect2>
+		<vector2 name="0/occluder_offset"> 51.5, 53.0935 </vector2>
+		<resource name="0/occluder"></resource>		<vector2 name="0/navigation_offset"> 51.5, 53.0935 </vector2>
+		<resource name="0/navigation"></resource>		<vector2 name="0/shape_offset"> 51.5, 53.0935 </vector2>
+		<array name="0/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://4">  </resource>
+		</array>
+		<vector2 name="0/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="0/one_way_collision_max_depth"> 0 </real>
+		<string name="1/name"> "BlocoN1E " </string>
+		<resource name="1/texture" external="1">  </resource>
+		<vector2 name="1/tex_offset"> 0, 0 </vector2>
+		<resource name="1/material"></resource>		<color name="1/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="1/region"> 0, 0, 104, 104 </rect2>
+		<vector2 name="1/occluder_offset"> 52, 52 </vector2>
+		<resource name="1/occluder"></resource>		<vector2 name="1/navigation_offset"> 52, 52 </vector2>
+		<resource name="1/navigation"></resource>		<vector2 name="1/shape_offset"> 52, 52 </vector2>
+		<array name="1/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://5">  </resource>
+		</array>
+		<vector2 name="1/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="1/one_way_collision_max_depth"> 0 </real>
+		<string name="2/name"> "BlocoN1D" </string>
+		<resource name="2/texture" external="8">  </resource>
+		<vector2 name="2/tex_offset"> 0, 0 </vector2>
+		<resource name="2/material"></resource>		<color name="2/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="2/region"> 0, 0, 103, 103 </rect2>
+		<vector2 name="2/occluder_offset"> 51.5, 51.5 </vector2>
+		<resource name="2/occluder"></resource>		<vector2 name="2/navigation_offset"> 51.5, 51.5 </vector2>
+		<resource name="2/navigation"></resource>		<vector2 name="2/shape_offset"> 51.5, 51.5 </vector2>
+		<array name="2/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://6">  </resource>
+		</array>
+		<vector2 name="2/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="2/one_way_collision_max_depth"> 0 </real>
+		<string name="3/name"> "BlocoN1T2CO" </string>
+		<resource name="3/texture" external="9">  </resource>
+		<vector2 name="3/tex_offset"> 0, 0 </vector2>
+		<resource name="3/material"></resource>		<color name="3/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="3/region"> 0, 0, 103, 103 </rect2>
+		<vector2 name="3/occluder_offset"> 51.5, 51.5 </vector2>
+		<resource name="3/occluder"></resource>		<vector2 name="3/navigation_offset"> 51.5, 51.5 </vector2>
+		<resource name="3/navigation"></resource>		<vector2 name="3/shape_offset"> 51.5, 51.5 </vector2>
+		<array name="3/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://2">  </resource>
+		</array>
+		<vector2 name="3/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="3/one_way_collision_max_depth"> 0 </real>
+		<string name="4/name"> "Blocodebarro" </string>
+		<resource name="4/texture" external="10">  </resource>
+		<vector2 name="4/tex_offset"> 0, 0 </vector2>
+		<resource name="4/material"></resource>		<color name="4/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="4/region"> 0, 0, 103, 103 </rect2>
+		<vector2 name="4/occluder_offset"> 51.5, 51.5 </vector2>
+		<resource name="4/occluder"></resource>		<vector2 name="4/navigation_offset"> 51.5, 51.5 </vector2>
+		<resource name="4/navigation"></resource>		<vector2 name="4/shape_offset"> 51.5, 51.5 </vector2>
+		<array name="4/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://3">  </resource>
+		</array>
+		<vector2 name="4/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="4/one_way_collision_max_depth"> 0 </real>
+		<string name="5/name"> "ArvoreT1" </string>
+		<resource name="5/texture" external="11">  </resource>
+		<vector2 name="5/tex_offset"> 0, 0 </vector2>
+		<resource name="5/material"></resource>		<color name="5/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="5/region"> 0, 0, 401, 394 </rect2>
+		<vector2 name="5/occluder_offset"> 200.5, 197 </vector2>
+		<resource name="5/occluder"></resource>		<vector2 name="5/navigation_offset"> 200.5, 197 </vector2>
+		<resource name="5/navigation"></resource>		<vector2 name="5/shape_offset"> 0, 0 </vector2>
+		<array name="5/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="5/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="5/one_way_collision_max_depth"> 0 </real>
+		<string name="6/name"> "ArvoreT1P" </string>
+		<resource name="6/texture" external="12">  </resource>
+		<vector2 name="6/tex_offset"> 0, 0 </vector2>
+		<resource name="6/material"></resource>		<color name="6/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="6/region"> 0, 0, 100, 98 </rect2>
+		<vector2 name="6/occluder_offset"> 50, 49 </vector2>
+		<resource name="6/occluder"></resource>		<vector2 name="6/navigation_offset"> 50, 49 </vector2>
+		<resource name="6/navigation"></resource>		<vector2 name="6/shape_offset"> 0, 0 </vector2>
+		<array name="6/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="6/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="6/one_way_collision_max_depth"> 0 </real>
+		<string name="7/name"> "ArvoreT1M" </string>
+		<resource name="7/texture" external="13">  </resource>
+		<vector2 name="7/tex_offset"> 0, 0 </vector2>
+		<resource name="7/material"></resource>		<color name="7/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="7/region"> 0, 0, 200, 197 </rect2>
+		<vector2 name="7/occluder_offset"> 100, 98.5 </vector2>
+		<resource name="7/occluder"></resource>		<vector2 name="7/navigation_offset"> 100, 98.5 </vector2>
+		<resource name="7/navigation"></resource>		<vector2 name="7/shape_offset"> 0, 0 </vector2>
+		<array name="7/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="7/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="7/one_way_collision_max_depth"> 0 </real>
+		<string name="8/name"> "ArvoreT2" </string>
+		<resource name="8/texture" external="14">  </resource>
+		<vector2 name="8/tex_offset"> 0, 0 </vector2>
+		<resource name="8/material"></resource>		<color name="8/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="8/region"> 0, 0, 344, 397 </rect2>
+		<vector2 name="8/occluder_offset"> 172, 198.5 </vector2>
+		<resource name="8/occluder"></resource>		<vector2 name="8/navigation_offset"> 172, 198.5 </vector2>
+		<resource name="8/navigation"></resource>		<vector2 name="8/shape_offset"> 0, 0 </vector2>
+		<array name="8/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="8/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="8/one_way_collision_max_depth"> 0 </real>
+		<string name="9/name"> "ArvoreT2P" </string>
+		<resource name="9/texture" external="15">  </resource>
+		<vector2 name="9/tex_offset"> 0, 0 </vector2>
+		<resource name="9/material"></resource>		<color name="9/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="9/region"> 0, 0, 84, 97 </rect2>
+		<vector2 name="9/occluder_offset"> 42, 48.5 </vector2>
+		<resource name="9/occluder"></resource>		<vector2 name="9/navigation_offset"> 42, 48.5 </vector2>
+		<resource name="9/navigation"></resource>		<vector2 name="9/shape_offset"> 0, 0 </vector2>
+		<array name="9/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="9/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="9/one_way_collision_max_depth"> 0 </real>
+		<string name="10/name"> "ArvoreT2M" </string>
+		<resource name="10/texture" external="2">  </resource>
+		<vector2 name="10/tex_offset"> 0, 0 </vector2>
+		<resource name="10/material"></resource>		<color name="10/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="10/region"> 0, 0, 172, 199 </rect2>
+		<vector2 name="10/occluder_offset"> 86, 99.5 </vector2>
+		<resource name="10/occluder"></resource>		<vector2 name="10/navigation_offset"> 86, 99.5 </vector2>
+		<resource name="10/navigation"></resource>		<vector2 name="10/shape_offset"> 0, 0 </vector2>
+		<array name="10/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="10/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="10/one_way_collision_max_depth"> 0 </real>
+		<string name="11/name"> "ArvoreT3" </string>
+		<resource name="11/texture" external="3">  </resource>
+		<vector2 name="11/tex_offset"> 0, 0 </vector2>
+		<resource name="11/material"></resource>		<color name="11/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="11/region"> 0, 0, 595, 397 </rect2>
+		<vector2 name="11/occluder_offset"> 297.5, 198.5 </vector2>
+		<resource name="11/occluder"></resource>		<vector2 name="11/navigation_offset"> 297.5, 198.5 </vector2>
+		<resource name="11/navigation"></resource>		<vector2 name="11/shape_offset"> 0, 0 </vector2>
+		<array name="11/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="11/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="11/one_way_collision_max_depth"> 0 </real>
+		<string name="12/name"> "ArvoreT3P" </string>
+		<resource name="12/texture" external="4">  </resource>
+		<vector2 name="12/tex_offset"> 0, 0 </vector2>
+		<resource name="12/material"></resource>		<color name="12/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="12/region"> 0, 0, 145, 97 </rect2>
+		<vector2 name="12/occluder_offset"> 72.5, 48.5 </vector2>
+		<resource name="12/occluder"></resource>		<vector2 name="12/navigation_offset"> 72.5, 48.5 </vector2>
+		<resource name="12/navigation"></resource>		<vector2 name="12/shape_offset"> 0, 0 </vector2>
+		<array name="12/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="12/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="12/one_way_collision_max_depth"> 0 </real>
+		<string name="13/name"> "ArvoreT3M" </string>
+		<resource name="13/texture" external="5">  </resource>
+		<vector2 name="13/tex_offset"> 0, 0 </vector2>
+		<resource name="13/material"></resource>		<color name="13/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="13/region"> 0, 0, 290, 193 </rect2>
+		<vector2 name="13/occluder_offset"> 145, 96.5 </vector2>
+		<resource name="13/occluder"></resource>		<vector2 name="13/navigation_offset"> 145, 96.5 </vector2>
+		<resource name="13/navigation"></resource>		<vector2 name="13/shape_offset"> 0, 0 </vector2>
+		<array name="13/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="13/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="13/one_way_collision_max_depth"> 0 </real>
+		<string name="14/name"> "Montanha" </string>
+		<resource name="14/texture" external="6">  </resource>
+		<vector2 name="14/tex_offset"> 0, 0 </vector2>
+		<resource name="14/material"></resource>		<color name="14/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="14/region"> 0, 0, 1034, 569 </rect2>
+		<vector2 name="14/occluder_offset"> 517, 284.5 </vector2>
+		<resource name="14/occluder"></resource>		<vector2 name="14/navigation_offset"> 517, 284.5 </vector2>
+		<resource name="14/navigation"></resource>		<vector2 name="14/shape_offset"> 0, 0 </vector2>
+		<array name="14/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="14/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="14/one_way_collision_max_depth"> 0 </real>
+		<string name="15/name"> "Cabana" </string>
+		<resource name="15/texture" external="7">  </resource>
+		<vector2 name="15/tex_offset"> 0, 0 </vector2>
+		<resource name="15/material"></resource>		<color name="15/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="15/region"> 0, 0, 198, 113 </rect2>
+		<vector2 name="15/occluder_offset"> 99, 56.5 </vector2>
+		<resource name="15/occluder"></resource>		<vector2 name="15/navigation_offset"> 99, 56.5 </vector2>
+		<resource name="15/navigation"></resource>		<vector2 name="15/shape_offset"> 0, 0 </vector2>
+		<array name="15/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="15/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="15/one_way_collision_max_depth"> 0 </real>
+		<string name="16/name"> "Cabana1" </string>
+		<resource name="16/texture" external="7">  </resource>
+		<vector2 name="16/tex_offset"> 0, 0 </vector2>
+		<resource name="16/material"></resource>		<color name="16/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="16/region"> 0, 0, 198, 113 </rect2>
+		<vector2 name="16/occluder_offset"> 99, 56.5 </vector2>
+		<resource name="16/occluder"></resource>		<vector2 name="16/navigation_offset"> 99, 56.5 </vector2>
+		<resource name="16/navigation"></resource>		<vector2 name="16/shape_offset"> 0, 0 </vector2>
+		<array name="16/shapes" len="0" shared="false">
+		</array>
+		<vector2 name="16/one_way_collision_direction"> 0, 0 </vector2>
+		<real name="16/one_way_collision_max_depth"> 0 </real>
+
+	</main_resource>
+</resource_file>

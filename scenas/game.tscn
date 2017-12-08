@@ -1,0 +1,744 @@
+[gd_scene load_steps=32 format=1]
+
+[ext_resource path="res://scripts/game.gd" type="Script" id=1]
+[ext_resource path="res://scripts/personagem.gd" type="Script" id=2]
+[ext_resource path="res://sprites/movebody.png" type="Texture" id=3]
+[ext_resource path="res://tiles/mapa4.xml" type="TileSet" id=4]
+[ext_resource path="res://sprites/nuvem1.png" type="Texture" id=5]
+[ext_resource path="res://sprites/nuvem2.png" type="Texture" id=6]
+[ext_resource path="res://sprites/nuvem3.png" type="Texture" id=7]
+[ext_resource path="res://sprites/campo1.png" type="Texture" id=8]
+[ext_resource path="res://sprites/campo2.png" type="Texture" id=9]
+[ext_resource path="res://sprites/campo3.png" type="Texture" id=10]
+[ext_resource path="res://scenas/manga.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenas/ameixas.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenas/mança.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenas/acaraje.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenas/Obstaculos.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenas/Obstaculos1.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenas/Obstaculos2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://sprites/botoes/left.png" type="Texture" id=18]
+[ext_resource path="res://sprites/botoes/lefthover.png" type="Texture" id=19]
+[ext_resource path="res://sprites/botoes/right.png" type="Texture" id=20]
+[ext_resource path="res://sprites/botoes/righthover.png" type="Texture" id=21]
+[ext_resource path="res://sprites/botoes/up.png" type="Texture" id=22]
+[ext_resource path="res://sprites/botoes/uphover.png" type="Texture" id=23]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 79.2858, 107.143 )
+
+[sub_resource type="Animation" id=2]
+
+length = 0.6
+loop = true
+step = 0.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("spriteOya:region_rect")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( -4, 828.388, 252, 360 ), Rect2( 300, 828.388, 220, 360 ), Rect2( 568, 828.388, 232, 360 ), Rect2( 38, 1225.65, 230, 339.832 ), Rect2( 322, 1225.65, 226, 339.832 ), Rect2( 582, 1225.65, 236, 339.832 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "caindo"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("spriteOya:region_rect")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.2, 0.4 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 38, 436.096, 244, 340.798 ), Rect2( 304, 436.096, 256, 350.192 ), Rect2( 576, 436.096, 252, 354.192 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource/name = "parada"
+length = 0.3
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("spriteOya:region_rect")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 582, 1592.52, 168, 335.35 ), Rect2( 322, 1592.52, 178, 331.784 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("spriteOya:region_rect")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.2, 0.4 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Rect2( 84, 60.84, 216, 332 ), Rect2( 348, 60.84, 204, 332 ), Rect2( 618, 60.84, 208, 332 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 55.5483, 25.8945 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 133 )
+
+[sub_resource type="GDScript" id=8]
+
+script/source = "extends Label
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	pass
+"
+
+[node name="game" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="respaw_time" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+autostart = false
+
+[node name="respaw_point" type="Position2D" parent="."]
+
+transform/pos = Vector2( 621.798, -90.7831 )
+
+[node name="Oya" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -83, 54 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 0.7, 0, 0, 0.7, 769.5, 490 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 2
+collision/margin = 0.08
+script/script = ExtResource( 2 )
+
+[node name="camera" type="Camera2D" parent="Oya"]
+
+transform/pos = Vector2( 735, 381 )
+transform/scale = Vector2( 1.2, 1.2 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1.2, 1.2 )
+limit/left = 0
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 800
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = true
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.4
+drag_margin/right = 0.2
+drag_margin/bottom = 0.4
+
+[node name="spriteOya" type="Sprite" parent="Oya"]
+
+transform/pos = Vector2( 785, 448 )
+transform/scale = Vector2( 0.7, 0.7 )
+z/z = 1
+texture = ExtResource( 3 )
+region = true
+region_rect = Rect2( -4, 828.388, 252, 360 )
+
+[node name="shape" type="CollisionShape2D" parent="Oya"]
+
+transform/pos = Vector2( 769.5, 490 )
+transform/scale = Vector2( 0.7, 0.7 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="anim" type="AnimationPlayer" parent="Oya"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/MoveOya = SubResource( 2 )
+anims/caindo = SubResource( 3 )
+anims/parada = SubResource( 4 )
+anims/pulando = SubResource( 5 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "MoveOya"
+
+[node name="RayChao" type="RayCast2D" parent="Oya"]
+
+visibility/light_mask = 2
+transform/pos = Vector2( 726, 564 )
+transform/scale = Vector2( 4, 4 )
+enabled = true
+cast_to = Vector2( 0, 1 )
+layer_mask = 3
+type_mask = 15
+
+[node name="RayChao1" type="RayCast2D" parent="Oya"]
+
+visibility/light_mask = 2
+transform/pos = Vector2( 817, 564 )
+transform/scale = Vector2( 4, 4 )
+enabled = true
+cast_to = Vector2( 0, 1 )
+layer_mask = 3
+type_mask = 15
+
+[node name="corpo" type="Area2D" parent="Oya"]
+
+editor/display_folded = true
+transform/pos = Vector2( 769, 480 )
+input/pickable = true
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 21 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision/mask = 4096
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Oya/corpo"]
+
+transform/pos = Vector2( 0, 21 )
+z/z = 1
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="TileMap" type="TileMap" parent="."]
+
+transform/pos = Vector2( -8, 0 )
+mode = 0
+tile_set = ExtResource( 4 )
+cell/size = Vector2( 102, 103 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 2
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 94, 8, 65601, 5, 131099, 5, 131108, 8, 196609, 11, 196620, 8, 196626, 11, 196653, 8, 196659, 1, 196660, 3, 196661, 2, 196665, 0, 196669, 1, 196670, 3, 196671, 2, 196695, 1, 196696, 3, 196697, 3, 196698, 3, 196699, 3, 196700, 3, 196701, 3, 196702, 3, 196703, 3, 196704, 2, 262184, 1, 262185, 2, 262194, 0, 262195, 4, 262196, 4, 262197, 4, 262201, 4, 262203, 0, 262205, 4, 262206, 4, 262207, 4, 262208, 1, 262209, 3, 262210, 3, 262211, 3, 262212, 3, 262213, 3, 262214, 3, 262215, 3, 262216, 2, 262219, 1, 262220, 3, 262221, 3, 262222, 2, 262228, 1, 262229, 3, 262230, 2, 262231, 4, 262232, 4, 262233, 4, 262234, 4, 262235, 4, 262236, 4, 262237, 4, 262238, 4, 262239, 4, 262240, 4, 327680, 15, 327689, 15, 327696, 15, 327707, 1, 327708, 3, 327709, 2, 327714, 1, 327715, 3, 327716, 3, 327717, 3, 327718, 3, 327719, 2, 327720, 4, 327721, 4, 327729, 0, 327730, 4, 327731, 4, 327732, 4, 327733, 4, 327737, 4, 327739, 4, 327741, 4, 327742, 4, 327743, 4, 327744, 4, 327745, 4, 327746, 4, 327747, 4, 327748, 4, 327749, 4, 327750, 4, 327751, 4, 327752, 4, 327753, 0, 327754, 2, 327755, 4, 327756, 4, 327757, 4, 327758, 4, 327764, 4, 327765, 4, 327766, 4, 327767, 4, 327768, 4, 327769, 4, 327770, 4, 327771, 4, 327772, 4, 327773, 4, 327774, 4, 327775, 4, 327776, 4, 393216, 3, 393217, 3, 393218, 3, 393219, 3, 393220, 3, 393221, 3, 393222, 3, 393223, 3, 393224, 3, 393225, 3, 393226, 3, 393227, 3, 393228, 3, 393229, 3, 393230, 3, 393231, 3, 393232, 3, 393233, 3, 393234, 3, 393235, 3, 393236, 3, 393237, 3, 393238, 3, 393239, 3, 393240, 3, 393241, 0, 393242, 0, 393243, 4, 393244, 4, 393245, 4, 393250, 4, 393251, 4, 393252, 4, 393253, 4, 393254, 4, 393255, 4, 393256, 4, 393257, 4, 393261, 1, 393262, 3, 393263, 3, 393264, 2, 393265, 4, 393266, 4, 393267, 4, 393268, 4, 393269, 4, 393273, 4, 393275, 4, 393277, 4, 393278, 4, 393279, 4, 393280, 4, 393281, 4, 393282, 4, 393283, 4, 393284, 4, 393285, 4, 393286, 4, 393287, 4, 393288, 4, 393289, 4, 393290, 4, 393291, 4, 393292, 4, 393293, 4, 393294, 4, 393300, 4, 393301, 4, 393302, 4, 393303, 4, 393304, 4, 393305, 4, 393306, 4, 393307, 4, 393308, 4, 393309, 4, 393310, 4, 393311, 4, 393312, 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -32, 484 )
+shapes/0/trigger = false
+collision/layers = 0
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+
+transform/pos = Vector2( -32, 484 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="barreira_direita" type="StaticBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 9922, -308 )
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -32, 484 )
+shapes/0/trigger = false
+collision/layers = 0
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barreira_direita"]
+
+transform/pos = Vector2( -32, 484 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+motion/scale = Vector2( 0.5, 0 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 1242, 0 )
+
+[node name="nuvem1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+transform/pos = Vector2( 225, 108 )
+texture = ExtResource( 5 )
+
+[node name="nuvem2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+transform/pos = Vector2( 632, 84 )
+z/z = 1
+texture = ExtResource( 6 )
+
+[node name="nuvem3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+transform/pos = Vector2( 1089, 105 )
+texture = ExtResource( 7 )
+
+[node name="campo1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+transform/pos = Vector2( 213, 421 )
+texture = ExtResource( 8 )
+
+[node name="campo2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+transform/pos = Vector2( 628, 415.456 )
+texture = ExtResource( 9 )
+
+[node name="campo3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+transform/pos = Vector2( 1040, 421 )
+texture = ExtResource( 10 )
+
+[node name="Mangueira" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="manga" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 5608, -11 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga5 5" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 6532, 132 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga4 4" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 6143, -11 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga45" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 7508, 94 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga1" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 5512, -12 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga5 2" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 6627, 126 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga4" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 7370, 93 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga5" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 6005, -12 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga2" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 5709, -12 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga5 3" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 6969, 93 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga4 2" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 6317, 126 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga43" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 7173, 93 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga3" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 5919, 35 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga5 4" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 7074, 91 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga55" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 7666, 91 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga57" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 7771, 91 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga56" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 7899, 91 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga4 3" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 6425, 129 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga44" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 8000, 90 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga46" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 8210, -15 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga47" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 8334, -15 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga48" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 8567, -15 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga49" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 8882, -120 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga50" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 9092, -120 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="manga51" parent="Mangueira" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 8987, -225 )
+transform/scale = Vector2( 1.1875, 1 )
+
+[node name="Ameixera" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="ameixas" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2782, 467 )
+
+[node name="ameixas10" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2887, 467 )
+
+[node name="ameixas11" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2992, 467 )
+
+[node name="ameixas1" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2677, 566 )
+
+[node name="ameixas2" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2572, 566 )
+
+[node name="ameixas3" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2467, 566 )
+
+[node name="ameixas4" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2152, 566 )
+
+[node name="ameixas6" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2047, 566 )
+
+[node name="ameixas7" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 1942, 566 )
+
+[node name="ameixas8" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 1837, 566 )
+
+[node name="ameixas9" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 1732, 566 )
+
+[node name="ameixas5" parent="Ameixera" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 2257, 566 )
+
+[node name="Macieira" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 1472, 420 )
+
+[node name="mança" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 2100, 53 )
+
+[node name="mança1" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 2205, 53 )
+
+[node name="mança2" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 2310, 53 )
+
+[node name="mança3" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 2415, 53 )
+
+[node name="mança4" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 2520, 53 )
+
+[node name="mança5" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 2625, -52 )
+
+[node name="mança6" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 2730, -52 )
+
+[node name="mança7" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 3207, -11 )
+
+[node name="mança8" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 3312, -11 )
+
+[node name="mança9" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 3412, 21 )
+
+[node name="mança10" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 3556, 50 )
+
+[node name="mança11" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 3661, -55 )
+
+[node name="mança12" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 3871, -160 )
+
+[node name="mança13" parent="Macieira" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 3976, -160 )
+
+[node name="Acaraje" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="acaraje" parent="Acaraje" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 1209, 570 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Acaraje/acaraje"]
+
+editor/display_folded = true
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Label" type="Label" parent="Acaraje/acaraje/CanvasLayer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = SubResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Acaraje/acaraje/CanvasLayer"]
+
+[node name="Acaraje1" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 6406, -105 )
+
+[node name="acaraje" parent="Acaraje1" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 1182, 570 )
+z/z = 1
+
+[node name="Obstaculos" parent="." instance=ExtResource( 15 )]
+
+visibility/light_mask = 4096
+
+[node name="Obstaculos1" parent="." instance=ExtResource( 16 )]
+
+transform/pos = Vector2( 5597, 15 )
+
+[node name="Obstaculos2" parent="." instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 2080, 87 )
+
+[node name="Respaw" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1.2, 1.2 )
+limit/left = 0
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 800
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="canvasLayer" type="CanvasLayer" parent="."]
+
+layer = 2
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="controles" type="Node2D" parent="canvasLayer"]
+
+[node name="touchLeft" type="TouchScreenButton" parent="canvasLayer/controles"]
+
+transform/pos = Vector2( 22.1863, 589.488 )
+transform/scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 18 )
+pressed = ExtResource( 19 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="touchRight" type="TouchScreenButton" parent="canvasLayer/controles"]
+
+transform/pos = Vector2( 204.186, 597.488 )
+transform/scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 20 )
+pressed = ExtResource( 21 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[node name="touchUp" type="TouchScreenButton" parent="canvasLayer/controles"]
+
+transform/pos = Vector2( 1078.66, 590.152 )
+transform/scale = Vector2( 3.5, 3.5 )
+normal = ExtResource( 22 )
+pressed = ExtResource( 23 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+
+[connection signal="timeout" from="respaw_time" to="." method="_on_respaw_time_timeout"]
+
+[connection signal="morreu" from="Oya" to="." method="_on_Oya_morreu"]
+
+[connection signal="body_enter" from="Oya/corpo" to="Oya" method="_on_corpo_body_enter"]
+
+[connection signal="pressed" from="canvasLayer/controles/touchLeft" to="Oya" method="_on_touchLeft_pressed"]
+
+[connection signal="released" from="canvasLayer/controles/touchLeft" to="Oya" method="_on_touchLeft_released"]
+
+[connection signal="pressed" from="canvasLayer/controles/touchRight" to="Oya" method="_on_touchRight_pressed"]
+
+[connection signal="released" from="canvasLayer/controles/touchRight" to="Oya" method="_on_touchRight_released"]
+
+[connection signal="pressed" from="canvasLayer/controles/touchUp" to="Oya" method="_on_touchUp_pressed"]
+
+[connection signal="released" from="canvasLayer/controles/touchUp" to="Oya" method="_on_touchUp_released"]
+
+

@@ -1,0 +1,401 @@
+[gd_resource type="TileSet" load_steps=17 format=1]
+
+[ext_resource path="res://sprites/arvoreT1.png" type="Texture" id=1]
+[ext_resource path="res://sprites/arvoreT2.png" type="Texture" id=2]
+[ext_resource path="res://sprites/arvoreT3.png" type="Texture" id=3]
+[ext_resource path="res://sprites/blocoN1D.png" type="Texture" id=4]
+[ext_resource path="res://sprites/montanha.png" type="Texture" id=5]
+[ext_resource path="res://sprites/cabanas.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 27.5159 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 58.7622 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 69.6243 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 80.1329 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 80.1329 )
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 80.2097 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 80.3346 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 20.2682 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.682, 64.0682 )
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 51.8914, 71.3466 )
+
+[resource]
+
+0/name = "BlocoN1CO"
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 105, 105 )
+0/occluder_offset = Vector2( 52.5, 52.5 )
+0/navigation_offset = Vector2( 52.5, 52.5 )
+0/shape_offset = Vector2( 52.5, 52.5 )
+0/shapes = [ SubResource( 1 ) ]
+0/one_way_collision_direction = Vector2( 0, 0 )
+0/one_way_collision_max_depth = 0.0
+1/name = "BlocoN1E "
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 104, 104 )
+1/occluder_offset = Vector2( 52, 52 )
+1/navigation_offset = Vector2( 52, 52 )
+1/shape_offset = Vector2( 52, 52 )
+1/shapes = [ SubResource( 1 ) ]
+1/one_way_collision_direction = Vector2( 0, 0 )
+1/one_way_collision_max_depth = 0.0
+2/name = "BlocoN1C"
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 103, 103 )
+2/occluder_offset = Vector2( 51.5, 51.5 )
+2/navigation_offset = Vector2( 51.5, 51.5 )
+2/shape_offset = Vector2( 51.5, 51.5 )
+2/shapes = [ SubResource( 1 ) ]
+2/one_way_collision_direction = Vector2( 0, 0 )
+2/one_way_collision_max_depth = 0.0
+3/name = "BlocoN1D"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 103, 103 )
+3/occluder_offset = Vector2( 51.5, 51.5 )
+3/navigation_offset = Vector2( 51.5, 51.5 )
+3/shape_offset = Vector2( 51.5, 51.5 )
+3/shapes = [ SubResource( 1 ) ]
+3/one_way_collision_direction = Vector2( 0, 0 )
+3/one_way_collision_max_depth = 0.0
+4/name = "BlocoN2CO"
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 103, 156 )
+4/occluder_offset = Vector2( 51.5, 78 )
+4/navigation_offset = Vector2( 51.5, 78 )
+4/shape_offset = Vector2( 51.5, 78 )
+4/shapes = [ SubResource( 1 ) ]
+4/one_way_collision_direction = Vector2( 0, 0 )
+4/one_way_collision_max_depth = 0.0
+5/name = "BlocoN2E"
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 103, 156 )
+5/occluder_offset = Vector2( 51.5, 78 )
+5/navigation_offset = Vector2( 51.5, 78 )
+5/shape_offset = Vector2( 51.5, 78 )
+5/shapes = [ SubResource( 1 ) ]
+5/one_way_collision_direction = Vector2( 0, 0 )
+5/one_way_collision_max_depth = 0.0
+6/name = "BlocoN2C"
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 103, 156 )
+6/occluder_offset = Vector2( 51.5, 78 )
+6/navigation_offset = Vector2( 51.5, 78 )
+6/shape_offset = Vector2( 51.5, 78 )
+6/shapes = [ SubResource( 1 ) ]
+6/one_way_collision_direction = Vector2( 0, 0 )
+6/one_way_collision_max_depth = 0.0
+7/name = "BlocoN2D"
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 103, 156 )
+7/occluder_offset = Vector2( 51.5, 78 )
+7/navigation_offset = Vector2( 51.5, 78 )
+7/shape_offset = Vector2( 51.5, 78 )
+7/shapes = [ SubResource( 1 ) ]
+7/one_way_collision_direction = Vector2( 0, 0 )
+7/one_way_collision_max_depth = 0.0
+8/name = "BlocoN3CO"
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 103, 209 )
+8/occluder_offset = Vector2( 51.5, 104.5 )
+8/navigation_offset = Vector2( 51.5, 104.5 )
+8/shape_offset = Vector2( 51.5, 104.5 )
+8/shapes = [ SubResource( 9 ) ]
+8/one_way_collision_direction = Vector2( 0, 0 )
+8/one_way_collision_max_depth = 0.0
+9/name = "BlocoN3E"
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 103, 209 )
+9/occluder_offset = Vector2( 51.5, 104.5 )
+9/navigation_offset = Vector2( 51.5, 104.5 )
+9/shape_offset = Vector2( 51.5, 104.5 )
+9/shapes = [ SubResource( 10 ) ]
+9/one_way_collision_direction = Vector2( 0, 0 )
+9/one_way_collision_max_depth = 0.0
+10/name = "BlocoN3C"
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 103, 209 )
+10/occluder_offset = Vector2( 51.5, 104.5 )
+10/navigation_offset = Vector2( 51.5, 104.5 )
+10/shape_offset = Vector2( 51.5, 104.5 )
+10/shapes = [ SubResource( 2 ) ]
+10/one_way_collision_direction = Vector2( 0, 0 )
+10/one_way_collision_max_depth = 0.0
+11/name = "BlocoN3D"
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 103, 209 )
+11/occluder_offset = Vector2( 51.5, 104.5 )
+11/navigation_offset = Vector2( 51.5, 104.5 )
+11/shape_offset = Vector2( 51.5, 104.5 )
+11/shapes = [ SubResource( 3 ) ]
+11/one_way_collision_direction = Vector2( 0, 0 )
+11/one_way_collision_max_depth = 0.0
+12/name = "BlocoN4CO"
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 103, 262 )
+12/occluder_offset = Vector2( 51.5, 131 )
+12/navigation_offset = Vector2( 51.5, 131 )
+12/shape_offset = Vector2( 51.5, 131 )
+12/shapes = [ SubResource( 4 ) ]
+12/one_way_collision_direction = Vector2( 0, 0 )
+12/one_way_collision_max_depth = 0.0
+13/name = "BlocoN4E"
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 103, 262 )
+13/occluder_offset = Vector2( 51.5, 131 )
+13/navigation_offset = Vector2( 51.5, 131 )
+13/shape_offset = Vector2( 51.5, 131 )
+13/shapes = [ SubResource( 5 ) ]
+13/one_way_collision_direction = Vector2( 0, 0 )
+13/one_way_collision_max_depth = 0.0
+14/name = "BlocoN4C"
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 103, 262 )
+14/occluder_offset = Vector2( 51.5, 131 )
+14/navigation_offset = Vector2( 51.5, 131 )
+14/shape_offset = Vector2( 51.5, 131 )
+14/shapes = [ SubResource( 6 ) ]
+14/one_way_collision_direction = Vector2( 0, 0 )
+14/one_way_collision_max_depth = 0.0
+15/name = "BlocoN4D"
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 103, 262 )
+15/occluder_offset = Vector2( 51.5, 131 )
+15/navigation_offset = Vector2( 51.5, 131 )
+15/shape_offset = Vector2( 51.5, 131 )
+15/shapes = [ SubResource( 7 ) ]
+15/one_way_collision_direction = Vector2( 0, 0 )
+15/one_way_collision_max_depth = 0.0
+16/name = "MeioBloco"
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 103, 53 )
+16/occluder_offset = Vector2( 51.5, 26.5 )
+16/navigation_offset = Vector2( 51.5, 26.5 )
+16/shape_offset = Vector2( 51.5, 26.5 )
+16/shapes = [ SubResource( 8 ) ]
+16/one_way_collision_direction = Vector2( 0, 0 )
+16/one_way_collision_max_depth = 0.0
+17/name = "matoT1CO"
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 104, 24 )
+17/occluder_offset = Vector2( 52, 12 )
+17/navigation_offset = Vector2( 52, 12 )
+17/shape_offset = Vector2( 0, 0 )
+17/shapes = [  ]
+17/one_way_collision_direction = Vector2( 0, 0 )
+17/one_way_collision_max_depth = 0.0
+18/name = "matoT1E"
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 103, 23 )
+18/occluder_offset = Vector2( 51.5, 11.5 )
+18/navigation_offset = Vector2( 51.5, 11.5 )
+18/shape_offset = Vector2( 0, 0 )
+18/shapes = [  ]
+18/one_way_collision_direction = Vector2( 0, 0 )
+18/one_way_collision_max_depth = 0.0
+19/name = "matoT1C"
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 104, 24 )
+19/occluder_offset = Vector2( 52, 12 )
+19/navigation_offset = Vector2( 52, 12 )
+19/shape_offset = Vector2( 0, 0 )
+19/shapes = [  ]
+19/one_way_collision_direction = Vector2( 0, 0 )
+19/one_way_collision_max_depth = 0.0
+20/name = "matoT1D"
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 0, 103, 30 )
+20/occluder_offset = Vector2( 51.5, 15 )
+20/navigation_offset = Vector2( 51.5, 15 )
+20/shape_offset = Vector2( 0, 0 )
+20/shapes = [  ]
+20/one_way_collision_direction = Vector2( 0, 0 )
+20/one_way_collision_max_depth = 0.0
+21/name = "matoT2CO"
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 0, 104, 29 )
+21/occluder_offset = Vector2( 52, 14.5 )
+21/navigation_offset = Vector2( 52, 14.5 )
+21/shape_offset = Vector2( 0, 0 )
+21/shapes = [  ]
+21/one_way_collision_direction = Vector2( 0, 0 )
+21/one_way_collision_max_depth = 0.0
+22/name = "matoT2E "
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 0, 104, 29 )
+22/occluder_offset = Vector2( 52, 14.5 )
+22/navigation_offset = Vector2( 52, 14.5 )
+22/shape_offset = Vector2( 0, 0 )
+22/shapes = [  ]
+22/one_way_collision_direction = Vector2( 0, 0 )
+22/one_way_collision_max_depth = 0.0
+23/name = "matoT2C"
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 0, 0, 104, 25 )
+23/occluder_offset = Vector2( 52, 12.5 )
+23/navigation_offset = Vector2( 52, 12.5 )
+23/shape_offset = Vector2( 0, 0 )
+23/shapes = [  ]
+23/one_way_collision_direction = Vector2( 0, 0 )
+23/one_way_collision_max_depth = 0.0
+24/name = "matoT2D"
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 104, 29 )
+24/occluder_offset = Vector2( 52, 14.5 )
+24/navigation_offset = Vector2( 52, 14.5 )
+24/shape_offset = Vector2( 0, 0 )
+24/shapes = [  ]
+24/one_way_collision_direction = Vector2( 0, 0 )
+24/one_way_collision_max_depth = 0.0
+25/name = "ArvoreT1"
+25/texture = ExtResource( 1 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 401, 394 )
+25/occluder_offset = Vector2( 200.5, 197 )
+25/navigation_offset = Vector2( 200.5, 197 )
+25/shape_offset = Vector2( 0, 0 )
+25/shapes = [  ]
+25/one_way_collision_direction = Vector2( 0, 0 )
+25/one_way_collision_max_depth = 0.0
+26/name = "ArvoreT1P"
+26/texture = ExtResource( 1 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, 0, 401, 394 )
+26/occluder_offset = Vector2( 200.5, 197 )
+26/navigation_offset = Vector2( 200.5, 197 )
+26/shape_offset = Vector2( 0, 0 )
+26/shapes = [  ]
+26/one_way_collision_direction = Vector2( 0, 0 )
+26/one_way_collision_max_depth = 0.0
+27/name = "ArvoreT2"
+27/texture = ExtResource( 2 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 0, 0, 344, 397 )
+27/occluder_offset = Vector2( 172, 198.5 )
+27/navigation_offset = Vector2( 172, 198.5 )
+27/shape_offset = Vector2( 0, 0 )
+27/shapes = [  ]
+27/one_way_collision_direction = Vector2( 0, 0 )
+27/one_way_collision_max_depth = 0.0
+28/name = "ArvoreT2P"
+28/texture = ExtResource( 2 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 0, 0, 344, 397 )
+28/occluder_offset = Vector2( 172, 198.5 )
+28/navigation_offset = Vector2( 172, 198.5 )
+28/shape_offset = Vector2( 0, 0 )
+28/shapes = [  ]
+28/one_way_collision_direction = Vector2( 0, 0 )
+28/one_way_collision_max_depth = 0.0
+29/name = "ArvoreT3"
+29/texture = ExtResource( 3 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 0, 0, 595, 397 )
+29/occluder_offset = Vector2( 297.5, 198.5 )
+29/navigation_offset = Vector2( 297.5, 198.5 )
+29/shape_offset = Vector2( 0, 0 )
+29/shapes = [  ]
+29/one_way_collision_direction = Vector2( 0, 0 )
+29/one_way_collision_max_depth = 0.0
+30/name = "ArvoreT3P"
+30/texture = ExtResource( 3 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 0, 0, 595, 397 )
+30/occluder_offset = Vector2( 297.5, 198.5 )
+30/navigation_offset = Vector2( 297.5, 198.5 )
+30/shape_offset = Vector2( 0, 0 )
+30/shapes = [  ]
+30/one_way_collision_direction = Vector2( 0, 0 )
+30/one_way_collision_max_depth = 0.0
+31/name = "Montanha"
+31/texture = ExtResource( 5 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 0, 0, 1034, 569 )
+31/occluder_offset = Vector2( 517, 284.5 )
+31/navigation_offset = Vector2( 517, 284.5 )
+31/shape_offset = Vector2( 0, 0 )
+31/shapes = [  ]
+31/one_way_collision_direction = Vector2( 0, 0 )
+31/one_way_collision_max_depth = 0.0
+32/name = "Cabana"
+32/texture = ExtResource( 6 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 0, 0, 198, 113 )
+32/occluder_offset = Vector2( 99, 56.5 )
+32/navigation_offset = Vector2( 99, 56.5 )
+32/shape_offset = Vector2( 0, 0 )
+32/shapes = [  ]
+32/one_way_collision_direction = Vector2( 0, 0 )
+32/one_way_collision_max_depth = 0.0
+
