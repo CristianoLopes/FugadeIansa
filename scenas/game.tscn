@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=38 format=1]
+=======
+[gd_scene load_steps=37 format=1]
+>>>>>>> 24393d5b7568dc18c1fdd971fe66dd3e67ad9589
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://scripts/personagem.gd" type="Script" id=2]
@@ -28,7 +32,10 @@
 [ext_resource path="res://scenas/ameixa_gera.tscn" type="PackedScene" id=26]
 [ext_resource path="res://scenas/manga_gera.tscn" type="PackedScene" id=27]
 [ext_resource path="res://scenas/maca_gera.tscn" type="PackedScene" id=28]
+<<<<<<< HEAD
 [ext_resource path="res://samples/voz_caindo_session.mp3.ogg" type="AudioStream" id=29]
+=======
+>>>>>>> 24393d5b7568dc18c1fdd971fe66dd3e67ad9589
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -535,6 +542,8 @@ margin/right = 247.0
 margin/bottom = 288.0
 custom_fonts/font = ExtResource( 24 )
 custom_colors/font_color = Color( 0.960784, 0.505882, 0.188235, 1 )
+<<<<<<< HEAD
+=======
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/line_spacing = 7
@@ -559,6 +568,7 @@ margin/right = 247.0
 margin/bottom = 369.0
 custom_fonts/font = ExtResource( 24 )
 custom_colors/font_color = Color( 0.827451, 0, 0, 1 )
+>>>>>>> 24393d5b7568dc18c1fdd971fe66dd3e67ad9589
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/line_spacing = 7
@@ -569,6 +579,33 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script/script = SubResource( 8 )
+<<<<<<< HEAD
+
+[node name="pontos_maca" type="Label" parent="canvasLayer"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 81.0
+margin/top = 237.0
+margin/right = 247.0
+margin/bottom = 369.0
+custom_fonts/font = ExtResource( 24 )
+custom_colors/font_color = Color( 0.827451, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 7
+custom_constants/shadow_offset_y = -1
+custom_constants/shadow_as_outline = 1
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = SubResource( 8 )
+=======
+>>>>>>> 24393d5b7568dc18c1fdd971fe66dd3e67ad9589
 
 [node name="time" type="Label" parent="canvasLayer"]
 
@@ -596,6 +633,7 @@ lines_skipped = 0
 max_lines_visible = -1
 
 [node name="acaraje_gera" parent="." instance=ExtResource( 25 )]
+<<<<<<< HEAD
 
 [node name="ameixa_gera" parent="." instance=ExtResource( 26 )]
 
@@ -613,6 +651,14 @@ stream/autoplay = false
 stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
+=======
+
+[node name="ameixa_gera" parent="." instance=ExtResource( 26 )]
+
+[node name="manga_gera" parent="." instance=ExtResource( 27 )]
+
+[node name="maca_gera" parent="." instance=ExtResource( 28 )]
+>>>>>>> 24393d5b7568dc18c1fdd971fe66dd3e67ad9589
 
 [connection signal="timeout" from="respaw_time" to="." method="_on_respaw_time_timeout"]
 

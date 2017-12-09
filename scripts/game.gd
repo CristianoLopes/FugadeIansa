@@ -15,7 +15,10 @@ func change_camera():
 	camera.make_current()
 
 func _on_Oya_morreu():
+<<<<<<< HEAD
 	get_node("somHit").play()
+=======
+>>>>>>> 24393d5b7568dc18c1fdd971fe66dd3e67ad9589
 	get_node("respaw_time").start()
 	transition.fade_to("res://scenas/mainMenu.tscn")
 #	change_camera()
