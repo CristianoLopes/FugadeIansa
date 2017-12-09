@@ -10,21 +10,21 @@
 [ext_resource path="res://sprites/campo1.png" type="Texture" id=8]
 [ext_resource path="res://sprites/campo2.png" type="Texture" id=9]
 [ext_resource path="res://sprites/campo3.png" type="Texture" id=10]
-[ext_resource path="res://scenas/manga.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenas/ameixas.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenas/mança.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenas/acaraje.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenas/Obstaculos.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenas/Obstaculos1.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenas/Obstaculos2.tscn" type="PackedScene" id=17]
-[ext_resource path="res://sprites/botoes/left.png" type="Texture" id=18]
-[ext_resource path="res://sprites/botoes/lefthover.png" type="Texture" id=19]
-[ext_resource path="res://sprites/botoes/right.png" type="Texture" id=20]
-[ext_resource path="res://sprites/botoes/righthover.png" type="Texture" id=21]
-[ext_resource path="res://sprites/botoes/up.png" type="Texture" id=22]
-[ext_resource path="res://sprites/botoes/uphover.png" type="Texture" id=23]
-[ext_resource path="res://sprites/cestaPontos.png" type="Texture" id=24]
-[ext_resource path="res://fonts/font140.fnt" type="BitmapFont" id=25]
+[ext_resource path="res://scenas/Obstaculos.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenas/Obstaculos1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenas/Obstaculos2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://sprites/botoes/left.png" type="Texture" id=14]
+[ext_resource path="res://sprites/botoes/lefthover.png" type="Texture" id=15]
+[ext_resource path="res://sprites/botoes/right.png" type="Texture" id=16]
+[ext_resource path="res://sprites/botoes/righthover.png" type="Texture" id=17]
+[ext_resource path="res://sprites/botoes/up.png" type="Texture" id=18]
+[ext_resource path="res://sprites/botoes/uphover.png" type="Texture" id=19]
+[ext_resource path="res://sprites/cestaPontos.png" type="Texture" id=20]
+[ext_resource path="res://fonts/font140.fnt" type="BitmapFont" id=21]
+[ext_resource path="res://scenas/acaraje_gera.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenas/ameixa_gera.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenas/manga_gera.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenas/maca_gera.tscn" type="PackedScene" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -107,7 +107,7 @@ extents = Vector2( 55.5483, 25.8945 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 133 )
 
-[sub_resource type="GDScript" id=8]
+[sub_resource type="GDScript" id=9]
 
 script/source = "extends Label
 
@@ -118,7 +118,10 @@ script/source = "extends Label
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	game.connect(\"score_changed\", self, \"_on_score_changed\")
 	pass
+func _on_score_changed():
+	set_text(str(game.score))
 "
 
 [node name="game" type="Node2D"]
@@ -360,300 +363,15 @@ texture = ExtResource( 9 )
 transform/pos = Vector2( 1040, 421 )
 texture = ExtResource( 10 )
 
-[node name="Mangueira" type="Node2D" parent="."]
-
-editor/display_folded = true
-
-[node name="manga" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 5608, -11 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga5 5" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 6532, 132 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga4 4" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 6143, -11 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga45" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 7508, 94 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga1" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 5512, -12 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga5 2" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 6627, 126 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga4" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 7370, 93 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga5" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 6005, -12 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga2" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 5709, -12 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga5 3" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 6969, 93 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga4 2" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 6317, 126 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga43" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 7173, 93 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga3" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 5919, 35 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga5 4" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 7074, 91 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga55" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 7666, 91 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga57" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 7771, 91 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga56" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 7899, 91 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga4 3" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 6425, 129 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga44" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 8000, 90 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga46" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 8210, -15 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga47" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 8334, -15 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga48" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 8567, -15 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga49" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 8882, -120 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga50" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 9092, -120 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="manga51" parent="Mangueira" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 8987, -225 )
-transform/scale = Vector2( 1.1875, 1 )
-
-[node name="Ameixera" type="Node2D" parent="."]
-
-editor/display_folded = true
-
-[node name="ameixas" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 2782, 467 )
-
-[node name="ameixas10" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 2887, 467 )
-
-[node name="ameixas11" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 2992, 467 )
-
-[node name="ameixas1" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 2677, 566 )
-
-[node name="ameixas2" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 2572, 566 )
-
-[node name="ameixas3" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 2467, 566 )
-
-[node name="ameixas4" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 2152, 566 )
-
-[node name="ameixas6" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 2047, 566 )
-
-[node name="ameixas7" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 1942, 566 )
-
-[node name="ameixas8" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 1837, 566 )
-
-[node name="ameixas9" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 1732, 566 )
-
-[node name="ameixas5" parent="Ameixera" instance=ExtResource( 12 )]
-
-transform/pos = Vector2( 2257, 566 )
-
-[node name="Macieira" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( 1472, 420 )
-
-[node name="mança" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 2100, 53 )
-
-[node name="mança1" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 2205, 53 )
-
-[node name="mança2" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 2310, 53 )
-
-[node name="mança3" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 2415, 53 )
-
-[node name="mança4" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 2520, 53 )
-
-[node name="mança5" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 2625, -52 )
-
-[node name="mança6" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 2730, -52 )
-
-[node name="mança7" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 3207, -11 )
-
-[node name="mança8" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 3312, -11 )
-
-[node name="mança9" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 3412, 21 )
-
-[node name="mança10" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 3556, 50 )
-
-[node name="mança11" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 3661, -55 )
-
-[node name="mança12" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 3871, -160 )
-
-[node name="mança13" parent="Macieira" instance=ExtResource( 13 )]
-
-transform/pos = Vector2( 3976, -160 )
-
-[node name="Acaraje" type="Node2D" parent="."]
-
-editor/display_folded = true
-
-[node name="acaraje" parent="Acaraje" instance=ExtResource( 14 )]
-
-transform/pos = Vector2( 1209, 570 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Acaraje/acaraje"]
-
-editor/display_folded = true
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-
-[node name="Label" type="Label" parent="Acaraje/acaraje/CanvasLayer"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 14.0
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-script/script = SubResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="Acaraje/acaraje/CanvasLayer"]
-
-[node name="Acaraje1" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( 6406, -105 )
-
-[node name="acaraje" parent="Acaraje1" instance=ExtResource( 14 )]
-
-transform/pos = Vector2( 1182, 570 )
-z/z = 1
-
-[node name="Obstaculos" parent="." instance=ExtResource( 15 )]
+[node name="Obstaculos" parent="." instance=ExtResource( 11 )]
 
 visibility/light_mask = 4096
 
-[node name="Obstaculos1" parent="." instance=ExtResource( 16 )]
+[node name="Obstaculos1" parent="." instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 5597, 15 )
 
-[node name="Obstaculos2" parent="." instance=ExtResource( 17 )]
+[node name="Obstaculos2" parent="." instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 2080, 87 )
 
@@ -691,8 +409,8 @@ editor/display_folded = true
 
 transform/pos = Vector2( 22.1863, 589.488 )
 transform/scale = Vector2( 3.5, 3.5 )
-normal = ExtResource( 18 )
-pressed = ExtResource( 19 )
+normal = ExtResource( 14 )
+pressed = ExtResource( 15 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -705,8 +423,8 @@ visibility_mode = 0
 
 transform/pos = Vector2( 204.186, 597.488 )
 transform/scale = Vector2( 3.5, 3.5 )
-normal = ExtResource( 20 )
-pressed = ExtResource( 21 )
+normal = ExtResource( 16 )
+pressed = ExtResource( 17 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -719,8 +437,8 @@ visibility_mode = 0
 
 transform/pos = Vector2( 1078.66, 590.152 )
 transform/scale = Vector2( 3.5, 3.5 )
-normal = ExtResource( 22 )
-pressed = ExtResource( 23 )
+normal = ExtResource( 18 )
+pressed = ExtResource( 19 )
 bitmask = null
 shape = null
 shape_centered = true
@@ -733,7 +451,7 @@ visibility_mode = 0
 
 transform/pos = Vector2( 76, 69 )
 transform/scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 24 )
+texture = ExtResource( 20 )
 
 [node name="pontos" type="Label" parent="canvasLayer"]
 
@@ -746,17 +464,18 @@ margin/left = 164.0
 margin/top = 20.0
 margin/right = 330.0
 margin/bottom = 152.0
-custom_fonts/font = ExtResource( 25 )
+custom_fonts/font = ExtResource( 21 )
 custom_colors/font_color = Color( 0.976471, 0.239216, 0.607843, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/line_spacing = 7
 custom_constants/shadow_offset_y = -1
 custom_constants/shadow_as_outline = 1
-text = "30"
+text = "0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = SubResource( 9 )
 
 [node name="time" type="Label" parent="canvasLayer"]
 
@@ -771,7 +490,7 @@ margin/left = 69.0
 margin/top = 0.0
 margin/right = -99.0
 margin/bottom = 132.0
-custom_fonts/font = ExtResource( 25 )
+custom_fonts/font = ExtResource( 21 )
 custom_colors/font_color = Color( 0.976471, 0.239216, 0.607843, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
@@ -782,6 +501,14 @@ text = "22"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="acaraje_gera" parent="." instance=ExtResource( 22 )]
+
+[node name="ameixa_gera" parent="." instance=ExtResource( 23 )]
+
+[node name="manga_gera" parent="." instance=ExtResource( 24 )]
+
+[node name="maca_gera" parent="." instance=ExtResource( 25 )]
 
 [connection signal="timeout" from="respaw_time" to="." method="_on_respaw_time_timeout"]
 

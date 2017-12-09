@@ -257,6 +257,4 @@ func reviver():
 	
 func acaraje():
 	emit_signal("acaraje")
-func ameixa():
-	emit_signal("ameixa")
 	
