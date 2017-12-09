@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://sprites/menubg.png" type="Texture" id=1]
+
+[node name="bg_menu" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 639.033, 361.397 )
+z/z = -1
+texture = ExtResource( 1 )
+
+

@@ -572,6 +572,7 @@ script/script = SubResource( 8 )
 
 [node name="time" type="Label" parent="canvasLayer"]
 
+visibility/visible = false
 anchor/left = 3
 anchor/right = 3
 rect/scale = Vector2( 0.8, 0.8 )
