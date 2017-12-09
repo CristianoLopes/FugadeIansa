@@ -21,29 +21,23 @@ func _on_Oya_morreu():
 	get_node("respaw_time").start()
 	
 	
-
-
-
 func _on_respaw_time_timeout():
 	reviver()
+	transition.fade_to("res://scenas/mainMenu.tscn")
 	
 func reviver():
 	person.set_pos(get_node("respaw_point").get_pos())
 	person.reviver()
 	get_node("Oya/spriteOya").set_flip_h(false)
 	
-
-
-func _on_Oya_acaraje():
-	acaraje += 50
-	get_node("canvasLayer/pontos").set_text(str(acaraje))
 	
 	
 func setScore(valor):
 	if valor > 0:
 		score = valor
 		emit_signal("score_changed")
-		
+
+
 
 
 
