@@ -26,9 +26,13 @@ const SLIDE_STOP_VELOCITY = 1.0 # One pixel per second
 const SLIDE_STOP_MIN_TRAVEL = 1.0 # One pixel
 signal ameixa
 signal acaraje
+signal manga
+signal maca
 var velocity = Vector2()
 var on_air_time = 100
 var jumping = false
+var score_curent = 0
+var score_best = 0
 var prev_jump_pressed = false
 var animacao = ""
 var nova_anim = ""
@@ -39,9 +43,6 @@ var vivo = true
 signal morreu
 enum {VIVO, MORTO}
 var status = VIVO
-#var score = 0 setget setScore
-signal score_changed
-
 
 
 
@@ -211,8 +212,6 @@ func _ready():
 
 
 
-
-
 func _on_corpo_body_enter( body ):
 	if not vivo: return
 	morrer()
@@ -260,6 +259,14 @@ func reviver():
 	
 func acaraje():
 	emit_signal("acaraje")
+
 func ameixa():
 	emit_signal("ameixa")
+
+func manga():
+	emit_signal("manga")
+
+
+func maca():
+	emit_signal("maca")
 	
