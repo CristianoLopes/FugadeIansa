@@ -26,6 +26,8 @@ const SLIDE_STOP_VELOCITY = 1.0 # One pixel per second
 const SLIDE_STOP_MIN_TRAVEL = 1.0 # One pixel
 signal ameixa
 signal acaraje
+signal manga
+signal maca
 var velocity = Vector2()
 var on_air_time = 100
 var jumping = false
@@ -257,4 +259,14 @@ func reviver():
 	
 func acaraje():
 	emit_signal("acaraje")
+
+func ameixa():
+	emit_signal("ameixa")
+
+func manga():
+	emit_signal("manga")
+
+
+func maca():
+	emit_signal("maca")
 	

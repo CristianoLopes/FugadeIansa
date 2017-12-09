@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=1]
+[gd_scene load_steps=37 format=1]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://scripts/personagem.gd" type="Script" id=2]
@@ -19,12 +19,15 @@
 [ext_resource path="res://sprites/botoes/righthover.png" type="Texture" id=17]
 [ext_resource path="res://sprites/botoes/up.png" type="Texture" id=18]
 [ext_resource path="res://sprites/botoes/uphover.png" type="Texture" id=19]
-[ext_resource path="res://sprites/cestaPontos.png" type="Texture" id=20]
-[ext_resource path="res://fonts/font140.fnt" type="BitmapFont" id=21]
-[ext_resource path="res://scenas/acaraje_gera.tscn" type="PackedScene" id=22]
-[ext_resource path="res://scenas/ameixa_gera.tscn" type="PackedScene" id=23]
-[ext_resource path="res://scenas/manga_gera.tscn" type="PackedScene" id=24]
-[ext_resource path="res://scenas/maca_gera.tscn" type="PackedScene" id=25]
+[ext_resource path="res://sprites/acaraje.png" type="Texture" id=20]
+[ext_resource path="res://sprites/ameixa.png" type="Texture" id=21]
+[ext_resource path="res://sprites/manga.png" type="Texture" id=22]
+[ext_resource path="res://sprites/maca.png" type="Texture" id=23]
+[ext_resource path="res://fonts/font140.fnt" type="BitmapFont" id=24]
+[ext_resource path="res://scenas/acaraje_gera.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenas/ameixa_gera.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenas/manga_gera.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenas/maca_gera.tscn" type="PackedScene" id=28]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -107,7 +110,7 @@ extents = Vector2( 55.5483, 25.8945 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 133 )
 
-[sub_resource type="GDScript" id=9]
+[sub_resource type="GDScript" id=8]
 
 script/source = "extends Label
 
@@ -118,10 +121,9 @@ script/source = "extends Label
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	game.connect(\"score_changed\", self, \"_on_score_changed\")
+	
 	pass
-func _on_score_changed():
-	set_text(str(game.score))
+
 	
 "
 
@@ -315,7 +317,6 @@ _update_shape_index = 0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -448,25 +449,43 @@ passby_press = false
 action = ""
 visibility_mode = 0
 
-[node name="Sprite" type="Sprite" parent="canvasLayer"]
+[node name="acaraje" type="Sprite" parent="canvasLayer"]
 
-transform/pos = Vector2( 76, 69 )
-transform/scale = Vector2( 1.5, 1.5 )
+transform/pos = Vector2( 40.4922, 61.4922 )
+transform/scale = Vector2( 0.548866, 0.548866 )
 texture = ExtResource( 20 )
 
-[node name="pontos" type="Label" parent="canvasLayer"]
+[node name="ameixa" type="Sprite" parent="canvasLayer"]
+
+transform/pos = Vector2( 40.0121, 124.012 )
+transform/scale = Vector2( 0.86579, 0.86579 )
+texture = ExtResource( 21 )
+
+[node name="manga" type="Sprite" parent="canvasLayer"]
+
+transform/pos = Vector2( 40.0121, 204.012 )
+transform/scale = Vector2( 0.86579, 0.86579 )
+texture = ExtResource( 22 )
+
+[node name="maca" type="Sprite" parent="canvasLayer"]
+
+transform/pos = Vector2( 40.0121, 288.012 )
+transform/scale = Vector2( 0.86579, 0.86579 )
+texture = ExtResource( 23 )
+
+[node name="pontos_acaraje" type="Label" parent="canvasLayer"]
 
 rect/scale = Vector2( 0.8, 0.8 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 164.0
-margin/top = 20.0
-margin/right = 330.0
-margin/bottom = 152.0
-custom_fonts/font = ExtResource( 21 )
-custom_colors/font_color = Color( 0.976471, 0.239216, 0.607843, 1 )
+margin/left = 81.0
+margin/top = -5.0
+margin/right = 247.0
+margin/bottom = 127.0
+custom_fonts/font = ExtResource( 24 )
+custom_colors/font_color = Color( 0.686275, 0.243137, 0.109804, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/line_spacing = 7
@@ -476,7 +495,79 @@ text = "0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script/script = SubResource( 9 )
+script/script = SubResource( 8 )
+
+[node name="pontos_ameixa" type="Label" parent="canvasLayer"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 81.0
+margin/top = 76.0
+margin/right = 247.0
+margin/bottom = 208.0
+custom_fonts/font = ExtResource( 24 )
+custom_colors/font_color = Color( 0.588235, 0.0156863, 0.0156863, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 7
+custom_constants/shadow_offset_y = -1
+custom_constants/shadow_as_outline = 1
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = SubResource( 8 )
+
+[node name="pontos_manga" type="Label" parent="canvasLayer"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 81.0
+margin/top = 156.0
+margin/right = 247.0
+margin/bottom = 288.0
+custom_fonts/font = ExtResource( 24 )
+custom_colors/font_color = Color( 0.960784, 0.505882, 0.188235, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 7
+custom_constants/shadow_offset_y = -1
+custom_constants/shadow_as_outline = 1
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = SubResource( 8 )
+
+[node name="pontos_maca" type="Label" parent="canvasLayer"]
+
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 81.0
+margin/top = 237.0
+margin/right = 247.0
+margin/bottom = 369.0
+custom_fonts/font = ExtResource( 24 )
+custom_colors/font_color = Color( 0.827451, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 7
+custom_constants/shadow_offset_y = -1
+custom_constants/shadow_as_outline = 1
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = SubResource( 8 )
 
 [node name="time" type="Label" parent="canvasLayer"]
 
@@ -491,7 +582,7 @@ margin/left = 69.0
 margin/top = 0.0
 margin/right = -99.0
 margin/bottom = 132.0
-custom_fonts/font = ExtResource( 21 )
+custom_fonts/font = ExtResource( 24 )
 custom_colors/font_color = Color( 0.976471, 0.239216, 0.607843, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
@@ -503,19 +594,23 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="acaraje_gera" parent="." instance=ExtResource( 22 )]
+[node name="acaraje_gera" parent="." instance=ExtResource( 25 )]
 
-[node name="ameixa_gera" parent="." instance=ExtResource( 23 )]
+[node name="ameixa_gera" parent="." instance=ExtResource( 26 )]
 
-[node name="manga_gera" parent="." instance=ExtResource( 24 )]
+[node name="manga_gera" parent="." instance=ExtResource( 27 )]
 
-[node name="maca_gera" parent="." instance=ExtResource( 25 )]
+[node name="maca_gera" parent="." instance=ExtResource( 28 )]
 
 [connection signal="timeout" from="respaw_time" to="." method="_on_respaw_time_timeout"]
 
 [connection signal="acaraje" from="Oya" to="." method="_on_Oya_acaraje"]
 
 [connection signal="ameixa" from="Oya" to="." method="_on_Oya_ameixa"]
+
+[connection signal="maca" from="Oya" to="." method="_on_Oya_maca"]
+
+[connection signal="manga" from="Oya" to="." method="_on_Oya_manga"]
 
 [connection signal="morreu" from="Oya" to="." method="_on_Oya_morreu"]
 
