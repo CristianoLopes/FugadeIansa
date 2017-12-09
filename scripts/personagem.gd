@@ -29,8 +29,6 @@ signal acaraje
 var velocity = Vector2()
 var on_air_time = 100
 var jumping = false
-var score_curent = 0
-var score_best = 0
 var prev_jump_pressed = false
 var animacao = ""
 var nova_anim = ""
@@ -41,6 +39,9 @@ var vivo = true
 signal morreu
 enum {VIVO, MORTO}
 var status = VIVO
+#var score = 0 setget setScore
+signal score_changed
+
 
 
 
@@ -207,6 +208,8 @@ func movimenta(delta):
 func _ready():
 	set_fixed_process(true)
 	set_process_input(true)
+
+
 
 
 

@@ -1,13 +1,17 @@
 extends Node2D
-
+const group_collects = "collects"
 onready var person = get_node("Oya")
 onready var camera = get_node("Respaw")
 var acaraje = 0
 var ameixa = 0
+var score = 0 setget setScore
+signal score_changed
 
 func _ready():
 	
 	pass
+
+
 
 func change_camera():
 	camera.set_global_pos(person.get_node("camera").get_camera_pos())
@@ -32,9 +36,17 @@ func reviver():
 	
 
 
-func _on_Oya_acaraje():
+func _on_Oya_acaraje(valor):
 	acaraje += 50
-	get_node("canvasLayer/pontos").set_text(str(acaraje))
+	valor = acaraje
+	score = valor
+	emit_signal("score_changed")
+	#get_node("canvasLayer/pontos").set_text(str(score))
+
+func setScore(valor):
+	if valor > 0:
+		score = valor 
+		emit_signal("score_changed")
 	
 
 
