@@ -16,4 +16,5 @@ func _process(delta):
 		var acaraje2 = pre_acaraje.instance()
 		acaraje.set_pos(Vector2(rand_range(100, 1000), 600))
 		get_owner().add_child(acaraje)
+
 	pass

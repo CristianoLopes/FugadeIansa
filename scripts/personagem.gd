@@ -252,9 +252,11 @@ func _on_touchUp_released():
 	bUp = false
 	
 func reviver():
+
 	velocity = Vector2(0, 0)
 	get_node("shape").set_trigger(false)
 	get_node("camera").make_current()
+	
 	vivo = true
 	
 func acaraje():

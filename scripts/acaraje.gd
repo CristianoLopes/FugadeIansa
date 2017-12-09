@@ -6,4 +6,5 @@ func _on_acaraje_body_enter( body ):
 	get_node("spriteacaraje").play("acaraje_ponto")
 	get_node("CollisionShape2D").queue_free()
 	yield(get_node("spriteacaraje"), "finished")
+
 	queue_free()

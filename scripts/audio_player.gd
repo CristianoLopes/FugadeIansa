@@ -5,5 +5,8 @@ extends Node
 # var b = "textvar"
 
 func _ready():
-	#get_node("")
+	
 	pass
+func play(sample_name):
+	get_node("stream_player1").play(sample_name)
+	

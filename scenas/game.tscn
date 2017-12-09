@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=1]
+[gd_scene load_steps=39 format=1]
 
 [ext_resource path="res://scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://scripts/personagem.gd" type="Script" id=2]
@@ -20,8 +20,8 @@
 [ext_resource path="res://sprites/botoes/up.png" type="Texture" id=18]
 [ext_resource path="res://sprites/botoes/uphover.png" type="Texture" id=19]
 [ext_resource path="res://sprites/acaraje.png" type="Texture" id=20]
-[ext_resource path="res://sprites/ameixa.png" type="Texture" id=21]
-[ext_resource path="res://sprites/manga.png" type="Texture" id=22]
+[ext_resource path="res://sprites/manga.png" type="Texture" id=21]
+[ext_resource path="res://sprites/ameixa.png" type="Texture" id=22]
 [ext_resource path="res://sprites/maca.png" type="Texture" id=23]
 [ext_resource path="res://fonts/font140.fnt" type="BitmapFont" id=24]
 [ext_resource path="res://scenas/acaraje_gera.tscn" type="PackedScene" id=25]
@@ -126,6 +126,19 @@ func _ready():
 	pass
 
 	
+"
+
+[sub_resource type="GDScript" id=9]
+
+script/source = "extends Label
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+		
+	pass
 "
 
 [node name="game" type="Node2D"]
@@ -456,15 +469,15 @@ transform/pos = Vector2( 40.4922, 61.4922 )
 transform/scale = Vector2( 0.548866, 0.548866 )
 texture = ExtResource( 20 )
 
-[node name="ameixa" type="Sprite" parent="canvasLayer"]
-
-transform/pos = Vector2( 40.0121, 124.012 )
-transform/scale = Vector2( 0.86579, 0.86579 )
-texture = ExtResource( 21 )
-
 [node name="manga" type="Sprite" parent="canvasLayer"]
 
 transform/pos = Vector2( 40.0121, 204.012 )
+transform/scale = Vector2( 0.86579, 0.86579 )
+texture = ExtResource( 21 )
+
+[node name="ameixa" type="Sprite" parent="canvasLayer"]
+
+transform/pos = Vector2( 40.0121, 124.012 )
 transform/scale = Vector2( 0.86579, 0.86579 )
 texture = ExtResource( 22 )
 
@@ -497,6 +510,31 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 script/script = SubResource( 8 )
+
+[node name="tex_bestscore" type="Label" parent="canvasLayer"]
+
+process/pause_mode = 2
+rect/scale = Vector2( 0.8, 0.8 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 202.0
+margin/top = -5.0
+margin/right = 368.0
+margin/bottom = 127.0
+custom_fonts/font = ExtResource( 24 )
+custom_colors/font_color = Color( 0.686275, 0.243137, 0.109804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 7
+custom_constants/shadow_offset_y = -1
+custom_constants/shadow_as_outline = 1
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = SubResource( 9 )
 
 [node name="pontos_ameixa" type="Label" parent="canvasLayer"]
 
