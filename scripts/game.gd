@@ -25,6 +25,10 @@ func _on_Oya_morreu():
 	transition.fade_to("res://scenas/mainMenu.tscn")
 	get_node("respaw_time").set_wait_time(2.5)
 	get_node("canvasLayer/tex_bestscore").set_text(str(game.bestscore))
+	get_node("canvasLayer/ameixa_score").set_text(str(game.bestscore))
+	get_node("canvasLayer/manga_score").set_text(str(game.bestscore))
+	get_node("canvasLayer/maca_score").set_text(str(game.bestscore))
+	
 
 	
 #func _on_respaw_time_timeout():
@@ -50,17 +54,27 @@ func _on_Oya_acaraje():
 func _on_Oya_ameixa():
 	ameixa += 5
 	get_node("canvasLayer/pontos_ameixa").set_text(str(ameixa))
+	
+	if ameixa  > game.bestscore:
+		game.bestscore =  ameixa
 	pass # replace with function body
 
 func _on_Oya_manga():
 	manga += 25
 	get_node("canvasLayer/pontos_manga").set_text(str(manga))
+	
+	
+	if manga  > game.bestscore:
+		game.bestscore =  manga
 	pass # replace with function body
 
 
 func _on_Oya_maca():
 	maca += 15
 	get_node("canvasLayer/pontos_maca").set_text(str(maca))
+	
+	if maca  > game.bestscore:
+		game.bestscore =  maca
 	pass # replace with function body
 
 func load_bestscore():

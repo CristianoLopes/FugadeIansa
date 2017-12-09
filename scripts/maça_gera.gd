@@ -11,7 +11,7 @@ func _process(delta):
 	if intervalo > 0:
 		intervalo -= delta
 	else:
-		intervalo = rand_range(15, 1)
+		intervalo = rand_range(8, 1)
 		var maca = pre_maca.instance()
 		maca.set_pos(Vector2(rand_range(4000, 7000), rand_range(600, 100)))
 		get_owner().add_child(maca)
